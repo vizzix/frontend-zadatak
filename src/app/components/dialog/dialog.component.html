@@ -1,0 +1,60 @@
+<div *ngIf="kontrola === 'DOCUMENT'">
+  <h3>Forma za novi Dokument</h3>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div *ngFor="let podaci of metaData.DOCUMENT.attributes">
+      <mat-form-field *ngIf="podaci.component === 'editbox'" appearance="fill">
+        <mat-label>{{ podaci.displayName }}</mat-label>
+        <input
+          matInput
+          [required]="podaci.mandatory"
+          [type]="podaci.dataType"
+        />
+      </mat-form-field>
+
+      <mat-form-field *ngIf="podaci.component === 'combobox'" appearance="fill">
+        <mat-label>{{ podaci.displayName }}</mat-label>
+        <mat-select formControlName="ranges">
+          <mat-option
+            *ngFor="let range of podaci.ranges"
+            value="{{ range.name }}"
+          >
+            {{ range.displayName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="accent">Spremi</button>
+  </form>
+</div>
+
+<div *ngIf="kontrola === 'INVOICE'">
+  <h3>Forma za novi Račun</h3>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div *ngFor="let podaci of metaData.INVOICE.attributes">
+      <mat-form-field
+        *ngIf="podaci.component === 'editbox' && podaci.dataFormat !== null"
+        appearance="fill"
+      >
+        <mat-label>{{ podaci.displayName }}</mat-label>
+        <input
+          matInput
+          [required]="podaci.mandatory"
+          [type]="podaci.dataType"
+        />
+      </mat-form-field>
+
+      <mat-form-field *ngIf="podaci.component === 'combobox'" appearance="fill">
+        <mat-label>{{ podaci.displayName }}</mat-label>
+        <mat-select formControlName="ranges">
+          <mat-option
+            *ngFor="let range of podaci.ranges"
+            value="{{ range.name }}"
+          >
+            {{ range.displayName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="accent">Spremi</button>
+  </form>
+</div>

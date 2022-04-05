@@ -1,0 +1,232 @@
+<mat-toolbar color="primary">
+  <span>Softcon zadatak </span>
+  <span class="example-spacer"></span>
+  <button
+    *ngIf="prikaziGumb"
+    mat-raised-button
+    color="accent"
+    (click)="prikaziForm(kontrola)"
+  >
+    Dodaj dokument
+  </button>
+</mat-toolbar>
+<div class="container">
+  <mat-form-field appearance="fill">
+    <mat-label>Odaberite tip dokumenta</mat-label>
+    <mat-select (selectionChange)="onTypeChange($event.value)">
+      <mat-option *ngFor="let tip of imenaTipaDokumenta" [value]="tip"
+        >{{ tip }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div *ngIf="folder" class="container">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let d of displayedColumns">
+          {{ d }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of demoData">
+        <td *ngFor="let d of data.attributes">
+          {{ d.value }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="document" class="container">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let d of displayedColumns">
+          {{ d }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of demoData">
+        <td *ngFor="let d of data.attributes">
+          {{ d.value }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="document && searchable" class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div *ngFor="let podaci of metaData.DOCUMENT.attributes">
+      <div *ngFor="let p of metaData.DOCUMENT.searchAttributes">
+        <div *ngIf="podaci.name === p.name">
+          <mat-form-field appearance="fill">
+            <mat-label>{{ podaci.displayName }}</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <button mat-raised-button color="accent">Pretraži</button>
+  </form>
+</div>
+
+<div *ngIf="invoice" class="container">
+  <table>
+    <thead>
+      <tr>
+        <th *ngFor="let d of displayedColumns">
+          {{ d }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of demoData">
+        <td *ngFor="let d of data.attributes">
+          {{ d.value }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="invoice && searchable" class="container">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div *ngFor="let podaci of metaData.INVOICE.attributes">
+      <div *ngFor="let p of metaData.INVOICE.searchAttributes">
+        <div *ngIf="podaci.name === p.name">
+          <mat-form-field appearance="fill">
+            <mat-label>{{ podaci.displayName }}</mat-label>
+            <input matInput />
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <button mat-raised-button color="accent">Pretraži</button>
+  </form>
+</div>
+<!--
+<div *ngIf="document">
+  <mat-table #table [dataSource]="demoData">
+    <ng-container *ngFor="let data of displayedColumns" matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>{{
+        data
+      }}</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.attributes.value }}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>
+
+
+  <div *ngIf="folder">
+  <mat-table #table [dataSource]="testniMatDs.data">
+    <ng-container
+      *ngFor="let d of testniMatDs.data"
+      matColumnDef="{{ d.values }}"
+    >
+      <mat-header-cell *matHeaderCellDef mat-sort-header>{{
+        d.values
+      }}</mat-header-cell>
+      <mat-cell *matCellDef="let row">{{ row.value }}</mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+  </mat-table>
+</div>
+
+<div *ngIf="document">
+  <div *ngFor="let data of demoData">
+    <mat-table #table [dataSource]="data.attributes">
+      <ng-container
+        *ngFor="let d of data.attributes"
+        matColumnDef="{{ d.name }}"
+      >
+        <mat-header-cell *matHeaderCellDef mat-sort-header>{{
+          d.name
+        }}</mat-header-cell>
+        <mat-cell *matCellDef="let row">{{ row.value }}</mat-cell>
+      </ng-container>
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    </mat-table>
+  </div>
+</div>
+
+
+<div class="forma" *ngIf="documentForm">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div *ngFor="let podaci of metaData.DOCUMENT.attributes">
+      <mat-form-field *ngIf="podaci.component === 'editbox'" appearance="fill">
+        <mat-label>{{ podaci.displayName }}</mat-label>
+        <input
+          matInput
+          [required]="podaci.mandatory"
+          [type]="podaci.dataType"
+        />
+      </mat-form-field>
+
+      <mat-form-field *ngIf="podaci.component === 'combobox'" appearance="fill">
+        <mat-label>{{ podaci.displayName }}</mat-label>
+        <mat-select formControlName="ranges">
+          <mat-option
+            *ngFor="let range of podaci.ranges"
+            value="{{ range.name }}"
+          >
+            {{ range.displayName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="accent">Submit</button>
+  </form>
+</div>
+
+<div class="forma" *ngIf="invoiceForm">
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div *ngFor="let podaci of metaData.INVOICE.attributes">
+      <mat-form-field *ngIf="podaci.component === 'editbox'" appearance="fill">
+        <mat-label>{{ podaci.displayName }}</mat-label>
+        <input
+          matInput
+          [required]="podaci.mandatory"
+          [type]="podaci.dataType"
+        />
+      </mat-form-field>
+
+      <mat-form-field *ngIf="podaci.component === 'combobox'" appearance="fill">
+        <mat-label>{{ podaci.displayName }}</mat-label>
+        <mat-select formControlName="ranges">
+          <mat-option
+            *ngFor="let range of podaci.ranges"
+            value="{{ range.name }}"
+          >
+            {{ range.displayName }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="accent">Submit</button>
+  </form>
+</div>
+-->
+<!--
+
+
+
+
+<div *ngIf="document">
+  <div *ngFor="let data of metaData.DOCUMENT.attributes">
+    {{ data.ranges }}
+    <p *ngFor="let rang of data.ranges">
+      {{ rang.name }}
+      {{ rang.isDefault }}
+      {{ rang.displayName }}
+    </p>
+  </div>
+</div>
+-->

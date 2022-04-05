@@ -1,0 +1,53 @@
+[
+	{
+		"objectID":"111",
+		"name":"Folder no.1",
+		"docTypeName":"FOLDER",
+		"folder":true,
+		"attributes":
+		[
+			{
+				"name": "creationDate",
+				"value": "2020-10-12 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Folder no.1"
+			}
+		]
+	},
+	{
+		"objectID":"112",
+		"name":"Folder no.2",
+		"docTypeName":"FOLDER",
+		"folder":true,
+		"attributes":
+		[
+			{
+				"name": "creationDate",
+				"value": "2020-09-12 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Folder no.2"
+			}
+		]
+	},
+	{
+		"objectID":"113",
+		"name":"Folder no.3",
+		"docTypeName":"FOLDER",
+		"folder":true,
+		"attributes":
+		[
+			{
+				"name": "creationDate",
+				"value": "2020-08-12 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Folder no.3"
+			}
+		]
+	}
+]

@@ -1,0 +1,360 @@
+{
+	"FOLDER": 
+	{
+		"docTypeName":"FOLDER",
+		"displayName":"Folder",
+		"folder":true,
+		"childTypes":
+		[
+			{
+				"docTypeName":"DOCUMENT",
+				"insertable":true,
+				"searchable":true,
+				"folder":false
+			},
+			{
+				"docTypeName":"INVOICE",
+				"insertable":true,
+				"searchable":true,
+				"folder":false
+			}
+		],
+		"attributes":
+		[
+			{
+				"name":"creationDate",
+				"dataType":"TIMESTAMP",
+				"dataFormat":"yyyy-MM-dd HH:mm:ss",
+				"mandatory":"false",
+				"displayName":"Vrijeme zaprimanja",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"name",
+				"dataType":"STRING",
+				"dataFormat":null,
+				"mandatory":"true",
+				"displayName":"Naziv foldera",
+				"component":"editbox",
+				"ranges":[]
+			}
+		],
+		"editableAttributes":
+		[
+			{
+				"name": "name"
+			}
+		],
+		"searchAttributes":
+		[
+			{
+				"name": "name"
+			},
+			{
+				"name": "creationDate"
+			}
+		],
+		"resultAttributes":
+		[
+			{
+				"name":"name"
+			},
+			{
+				"name": "creationDate"
+			}
+		]
+	},
+	"DOCUMENT":
+	{
+		"docTypeName":"DOCUMENT",
+		"displayName":"Dokument",
+		"folder":false,
+		"childTypes":
+		[],
+		"attributes":
+		[
+			{
+				"name":"creationDate",
+				"dataType":"TIMESTAMP",
+				"dataFormat":"yyyy-MM-dd HH:mm:ss",
+				"mandatory":"false",
+				"displayName":"Vrijeme zaprimanja",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"docDate",
+				"dataType":"DATE",
+				"dataFormat":"yyyy-MM-dd",
+				"mandatory":"true",
+				"displayName":"Datum dokumenta",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"name",
+				"dataType":"STRING",
+				"dataFormat":null,
+				"mandatory":"true",
+				"displayName":"Naziv dokumenta",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"notice",
+				"dataType":"STRING",
+				"dataFormat":null,
+				"mandatory":"false",
+				"displayName":"Bilješka",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"docType",
+				"dataType":"STRING",
+				"dataFormat":null,
+				"mandatory":"false",
+				"displayName":"Vrsta priloga",
+				"component":"combobox",
+				"ranges":
+				[
+					{
+						"name": "1",
+						"isDefault": true,
+						"displayName": "Dopis"
+					},
+					{
+						"name": "2",
+						"isDefault": false,
+						"displayName": "Prilog"
+					},
+					{
+						"name": "3",
+						"isDefault": false,
+						"displayName": "Ostalo"
+					}
+				]
+			}
+		],
+		"editableAttributes":
+		[
+			{
+				"name": "name"
+			},
+			{
+				"name": "docDate"
+			},
+			{
+				"name": "notice"
+			},
+			{
+				"name": "docType"
+			}
+		],
+		"searchAttributes":
+		[
+			{
+				"name": "creationDate"
+			},
+			{
+				"name": "name"
+			},
+			{
+				"name": "docDate"
+			},
+			{
+				"name": "notice"
+			},
+			{
+				"name": "docType"
+			}
+		],
+		"resultAttributes":
+		[
+			{
+				"name": "docType"
+			},
+			{
+				"name": "creationDate"
+			},
+			{
+				"name": "name"
+			},
+			{
+				"name": "docDate"
+			},
+			{
+				"name": "notice"
+			}
+		]
+	},
+	"INVOICE":
+	{
+		"docTypeName":"INVOICE",
+		"displayName":"Račun",
+		"folder":false,
+		"childTypes":[],
+		"attributes":
+		[
+			{
+				"name":"creationDate",
+				"dataType":"TIMESTAMP",
+				"dataFormat":"yyyy-MM-dd HH:mm:ss",
+				"mandatory":"false",
+				"displayName":"Vrijeme zaprimanja",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"invoiceDate",
+				"dataType":"DATE",
+				"dataFormat":"yyyy-MM-dd",
+				"mandatory":"false",
+				"displayName":"Datum računa",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"name",
+				"dataType":"STRING",
+				"dataFormat":null,
+				"mandatory":"false",
+				"displayName":"Naziv računa",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"priority",
+				"dataType":"STRING",
+				"dataFormat":null,
+				"mandatory":"false",
+				"displayName":"Prioritet",
+				"component":"combobox",
+				"ranges":
+				[
+					{
+						"name": "1",
+						"isDefault": false,
+						"displayName": "Hitno"
+					},
+					{
+						"name": "2",
+						"isDefault": true,
+						"displayName": "Važno"
+					},
+					{
+						"name": "3",
+						"isDefault": false,
+						"displayName": "Manje važno"
+					},
+					{
+						"name": "4",
+						"isDefault": false,
+						"displayName": "Nevažno"
+					}
+				]
+			},
+			{
+				"name":"invoiceNumber",
+				"dataType":"STRING",
+				"dataFormat":null,
+				"mandatory":"true",
+				"displayName":"Broj računa",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"totalAmount",
+				"dataType":"DOUBLE",
+				"dataFormat":null,
+				"mandatory":"false",
+				"displayName":"Ukupni iznos",
+				"component":"editbox",
+				"ranges":[]
+			},
+			{
+				"name":"currency",
+				"dataType":"STRING",
+				"dataFormat":null,
+				"mandatory":"false",
+				"displayName":"Valuta",
+				"component":"combobox",
+				"ranges":
+				[
+					{
+						"name": "EUR",
+						"isDefault": true,
+						"displayName": "EUR"
+					},
+					{
+						"name": "HRK",
+						"isDefault": false,
+						"displayName": "HRK"
+					},
+					{
+						"name": "USD",
+						"isDefault": false,
+						"displayName": "USD"
+					},
+					{
+						"name": "GBP",
+						"isDefault": false,
+						"displayName": "GBP"
+					},
+					{
+						"name": "CHF",
+						"isDefault": false,
+						"displayName": "CHF"
+					}
+				]
+			}
+		],
+		"editableAttributes":[],
+		"searchAttributes":
+		[
+			{
+				"name": "creationDate"
+			},
+			{
+				"name": "invoiceDate"
+			},
+			{
+				"name": "name"
+			},
+			{
+				"name": "priority"
+			},
+			{
+				"name": "invoiceNumber"
+			},
+			{
+				"name": "totalAmount"
+			}
+		],
+		"resultAttributes":
+		[
+			{
+				"name": "creationDate"
+			},
+			{
+				"name": "invoiceDate"
+			},
+			{
+				"name": "name"
+			},
+			{
+				"name": "priority"
+			},
+			{
+				"name": "invoiceNumber"
+			},
+			{
+				"name": "totalAmount"
+			},
+			{
+				"name":"currency"
+			}
+		]
+	}
+}

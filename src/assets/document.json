@@ -1,0 +1,235 @@
+[
+	{
+		"objectID":"5551",
+		"name":"Prvi dokument",
+		"docTypeName":"DOCUMENT",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "docType",
+				"value": "2"
+			},
+			{
+				"name": "creationDate",
+				"value": "2019-11-30 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Prvi dokument"
+			},
+			{
+				"name": "docDate",
+				"value": "2019-11-30"
+			},
+			{
+				"name": "notice",
+				"value": "test"
+			}
+		]
+	},
+	{
+		"objectID":"5552",
+		"name":"Drugi dokument",
+		"docTypeName":"DOCUMENT",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "docType",
+				"value": "3"
+			},
+			{
+				"name": "creationDate",
+				"value": "2019-12-30 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Drugi dokument"
+			},
+			{
+				"name": "docDate",
+				"value": "2019-12-30"
+			},
+			{
+				"name": "notice",
+				"value": "Ovaj dokument je važan"
+			}
+		]
+	},
+	{
+		"objectID":"5553",
+		"name":"Osvrt",
+		"docTypeName":"DOCUMENT",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "docType",
+				"value": "1"
+			},
+			{
+				"name": "creationDate",
+				"value": "2019-05-30 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Osvrt"
+			},
+			{
+				"name": "docDate",
+				"value": "2019-05-30"
+			},
+			{
+				"name": "notice",
+				"value": "Osvrt na racun broj 1"
+			}
+		]
+	},
+	{
+		"objectID":"5554",
+		"name":"Prilog racunu broj 5",
+		"docTypeName":"DOCUMENT",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "docType",
+				"value": "2"
+			},
+			{
+				"name": "creationDate",
+				"value": "2019-08-10 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Prilog racunu broj 5"
+			},
+			{
+				"name": "docDate",
+				"value": "2019-08-10"
+			},
+			{
+				"name": "notice",
+				"value": "Uz racun broj 5, potrebno je priloziti ovaj dokument."
+			}
+		]
+	},
+	{
+		"objectID":"5555",
+		"name":"Test prilog 2",
+		"docTypeName":"DOCUMENT",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "docType",
+				"value": "1"
+			},
+			{
+				"name": "creationDate",
+				"value": "2019-06-12 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Test prilog 2"
+			},
+			{
+				"name": "docDate",
+				"value": "2019-06-12"
+			},
+			{
+				"name": "notice",
+				"value": "biljeska"
+			}
+		]
+	},
+	{
+		"objectID":"5556",
+		"name":"Dokument broj dva",
+		"docTypeName":"DOCUMENT",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "docType",
+				"value": "3"
+			},
+			{
+				"name": "creationDate",
+				"value": "2019-05-05 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Dokument broj dva"
+			},
+			{
+				"name": "docDate",
+				"value": "2019-05-05"
+			},
+			{
+				"name": "notice",
+				"value": null
+			}
+		]
+	},
+	{
+		"objectID":"5557",
+		"name":"Dopis broj jedan",
+		"docTypeName":"DOCUMENT",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "docType",
+				"value": "1"
+			},
+			{
+				"name": "creationDate",
+				"value": "2019-04-01 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Dopis broj jedan"
+			},
+			{
+				"name": "docDate",
+				"value": "2019-04-01"
+			},
+			{
+				"name": "notice",
+				"value": null
+			}
+		]
+	},
+	{
+		"objectID":"5558",
+		"name":"Dopis otvaranja računa 1233",
+		"docTypeName":"DOCUMENT",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "docType",
+				"value": "1"
+			},
+			{
+				"name": "creationDate",
+				"value": "2019-03-11 14:34:43"
+			},
+			{
+				"name": "name",
+				"value": "Dopis otvaranja računa 1233"
+			},
+			{
+				"name": "docDate",
+				"value": "2019-03-11"
+			},
+			{
+				"name": "notice",
+				"value": "Priložiti uz račun 1233"
+			}
+		]
+	}
+	
+]

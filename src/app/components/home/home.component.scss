@@ -1,0 +1,30 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+  .container {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    table {
+      text-align: left;
+    }
+  }
+  mat-form-field {
+    width: 100%;
+  }
+  table {
+    width: 100%;
+  }
+  th {
+    text-align: left;
+  }
+
+
+  

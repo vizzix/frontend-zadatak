@@ -1,0 +1,113 @@
+[
+	{
+		"objectID":"1234",
+		"name":"2018-09-18_1212_14_Test d_o_o_",
+		"docTypeName":"INVOICE",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "priority",
+				"value": "2"
+			},
+			{
+				"name": "creationDate",
+				"value": "2020-11-12 14:34:43"
+			},
+			{
+				"name": "totalAmount",
+				"value": "150"
+			},
+			{
+				"name": "name",
+				"value": "2018-09-18_1212_14_Test d_o_o_"
+			},
+			{
+				"name": "currency",
+				"value": "HRK"
+			},
+			{
+				"name": "invoiceDate",
+				"value": "2018-09-18"
+			},
+			{
+				"name": "invoiceNumber",
+				"value": "0012345554"
+			}
+		]
+	},
+	{
+		"objectID":"1235",
+		"name":"2020-11-12_1212_14_Angular d_o_o_",
+		"docTypeName":"INVOICE",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "priority",
+				"value": "1"
+			},
+			{
+				"name": "creationDate",
+				"value": "2020-10-12 14:34:43"
+			},
+			{
+				"name": "totalAmount",
+				"value": "2200"
+			},
+			{
+				"name": "name",
+				"value": "2020-11-12_1212_14_Angular d_o_o_"
+			},
+			{
+				"name": "currency",
+				"value": "USD"
+			},
+			{
+				"name": "invoiceDate",
+				"value": "2020-11-12"
+			},
+			{
+				"name": "invoiceNumber",
+				"value": "0022451255"
+			}
+		]
+	},
+	{
+		"objectID":"1236",
+		"name":"Tvrtka d.o.o",
+		"docTypeName":"INVOICE",
+		"folder":false,
+		"attributes":
+		[
+			{
+				"name": "priority",
+				"value": "3"
+			},
+			{
+				"name": "creationDate",
+				"value": "2020-09-09 10:34:43"
+			},
+			{
+				"name": "totalAmount",
+				"value": "100"
+			},
+			{
+				"name": "name",
+				"value": "Tvrtka d.o.o"
+			},
+			{
+				"name": "currency",
+				"value": "HRK"
+			},
+			{
+				"name": "invoiceDate",
+				"value": "2020-09-09"
+			},
+			{
+				"name": "invoiceNumber",
+				"value": "0021112569"
+			}
+		]
+	}
+]
